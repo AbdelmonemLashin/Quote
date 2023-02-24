@@ -1,5 +1,5 @@
-var btnNewQuote=document.getElementById('newQuote')
-var contentChange=document.getElementById('content')
+let  btnNewQuote=document.getElementById('newQuote')
+let contentChange=document.getElementById('content')
 
 
 // var arrNumberrandom=(Math.random()*arrQuote.length)
@@ -9,20 +9,20 @@ var contentChange=document.getElementById('content')
 
 
 btnNewQuote.addEventListener('click',function(){
-  function newQuote(){
+  // function newQuote(){
 
     var arrNumberrandom=(Math.random()*arrQuote.length)
-    var arrNumberFinal=Math.floor(arrNumberrandom)
-
+    var arrNumberFinal=Math.trunc(arrNumberrandom)
+console.log(arrNumberFinal);
 
     contentChange.innerHTML=`<h3 class="my-4 quoteHeader" >${arrQuote[arrNumberFinal].quote}</h3>
 <h3 class="my-5 quoteContent">${arrQuote[arrNumberFinal].auther}</h3>
 `
-  }
+  // }
   // console.log(Math.random()*arrQuote.length);
 
 
-  newQuote()
+  // newQuote()
 })
 
 
